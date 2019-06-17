@@ -11,4 +11,3 @@ elif y == n:
     print(int(s[:x]) + int(s[x:]))
 else:
     print(min(int(s[:y]) + int(s[y:]), int(s[:x]) + int(s[x:])))
-#
