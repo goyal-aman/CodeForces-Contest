@@ -1,5 +1,1 @@
-n = int(input())
-s = sorted(list(map(int, input().split())))
-l = list(j-i for i,j in zip(s,s[1:]))
-print(s)
-print(l)
+
