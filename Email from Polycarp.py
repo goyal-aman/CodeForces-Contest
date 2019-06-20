@@ -1,51 +1,21 @@
-from collections import Counter
+from itertools import groupby
 
 n = int(input())
-l =[]
-for i in range(n):
-    l.append([input(), input()])
+for _  in range(n):
+    str1 = input()
+    str2 = input()
 
-for ele in l:
-    dict1 = dict(Counter(ele[0]))
-    dict2 = dict(Counter(ele[1]))
+    li1 = [''.join(k) for _,k in groupby(str1)]
+    li2 = [''.join(k) for _,k in groupby(str2)]
 
-    if set(dict1)!=set(dict2):
+    if len(li1) != len(li2) or len(li2) < len(li1):
         print('NO')
-        break
-
-    for i in set(dict1):
-        if dict1[i] > dict2[i]:
+        continue
+    for i,j in zip(li1, li2):
+        a = len(i)<len(j)
+        b = set(i) != set(j)
+        if len(i)>len(j) or set(i) != set(j):
             print('NO')
             break
     else:
         print('YES')
-
-
-    # from collections import Counter
-# n = int(input())
-# l = []
-# for _ in range(n):
-#     dict1 = dict(Counter(input()))
-#     dict2 = dict(Counter(input()))
-#     main_dict = {
-#         'dict1': dict1,
-#         'dict2': dict2
-#     }
-#     l.append(main_dict)
-# # t = l
-# # print('t = ',t)
-# # for i in l:
-# #     print(i)
-#
-#     #dict1 = dict(Counter(input()))
-#     #dict2 = dict(Counter(input()))
-#     # print(dict1, dict2)
-# for i in l:
-#     if i['dict1']!=i['dict2']:
-#         print('NO')
-#         exit()
-#     for j in set(i['dict1']):
-#         if i['dict1'][j] < i['dict2'][j]:
-#             print('NO')
-#             exit()
-#     print('YES')
