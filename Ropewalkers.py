@@ -9,3 +9,4 @@ if abs(s[1]-s[2])< d:
     move += d - abs(s[1]-s[2])
 # print((d-(abs(s[1]-s[0])))+(d-(abs(s[1]-s[2]))))
 print(move)
+#
