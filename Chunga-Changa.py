@@ -7,3 +7,4 @@ if remaining_money >= c:
     total_cononut += 1
     money_exchange = c - max(m1 % c, m2 % c)
 print(total_cononut, money_exchange)
+#
